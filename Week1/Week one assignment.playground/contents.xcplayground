@@ -4,5 +4,6 @@
         <page name='Git and GitHub'/>
         <page name='Swift Basic'/>
         <page name='Swift Collection'/>
+        <page name='Control Flow'/>
     </pages>
 </playground>
