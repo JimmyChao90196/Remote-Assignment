@@ -68,7 +68,7 @@
 
 //MARK: - How to establish a GitHub repo and upload local projects to it.
 
-//Step 1-1: Login to the github personal account and in the repository section. There's a new button for us to create a new remote repository.
+//Step 1-1: Login to the github personal account and in the repository section. There's a "new" button for us to create a new remote repository.
 
 //Step 1-2: Create a remote repo, name it and decide if we want a README file or LICENSE file.
 
