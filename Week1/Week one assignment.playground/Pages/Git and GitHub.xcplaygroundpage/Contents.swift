@@ -1,6 +1,6 @@
 //AppWorks shchool assignment -week 1
 
-//MARK: - Part one - git and github
+//MARK: - Part one --git and github
 
 
 

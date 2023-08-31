@@ -3,5 +3,6 @@
     <pages>
         <page name='Git and GitHub'/>
         <page name='Swift Basic'/>
+        <page name='Swift Collection'/>
     </pages>
 </playground>
