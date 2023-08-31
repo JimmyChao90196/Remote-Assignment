@@ -5,5 +5,6 @@
         <page name='Swift Basic'/>
         <page name='Swift Collection'/>
         <page name='Control Flow'/>
+        <page name='Swift Function'/>
     </pages>
 </playground>
