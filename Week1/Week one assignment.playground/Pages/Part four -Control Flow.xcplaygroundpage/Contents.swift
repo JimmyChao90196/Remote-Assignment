@@ -79,7 +79,7 @@ repeat{
 //MARK: -5. The differences between while and repeat-while
 //While loop check the condition before excuting the code.
 //Repeat while excute the code before checking the iterating condition.
-//So given the any index number, repeat while will at least have one excution compare to while loop
+//So given the any index number, repeat while will at least have one(the first iteration) excution compare to while loop.
 
 
 

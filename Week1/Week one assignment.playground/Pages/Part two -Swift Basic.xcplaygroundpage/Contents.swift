@@ -37,9 +37,10 @@ let recordSystem:Double = Double(average)
 
 
 //MARK: - 4-2. The different between 10/3 and 10.0/3.0
-var integerDivision = (10/3) // This will return a rounded integer to us
-var doubleDivision = (10.0/3.0) // And this will give us a double
-
+var integerDivision = (10/3)
+var doubleDivision = (10.0/3.0)
+// (10/3) will return a rounded integer to us
+// (10.0/3.0) And this will give us a double
 
 
 //MARK: - 5. Remainder calculation
@@ -65,7 +66,7 @@ let averageScore:Double = 86.8
 
 //MARK: -8. Type mis-match
 var phoneNumber = 0987654321
-phoneNumber = "Hello world"
+//phoneNumber = "Hello world"
 
 //The code above is likely to get an error of type mis-match. The first line we declare a phoneNumber with the value of 0987654321. Without specify the type of the phoneNumber variable. Type inference will then decide the type according to the input value, which is integer.
 

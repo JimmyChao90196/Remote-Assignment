@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='Git and GitHub'/>
-        <page name='Swift Basic'/>
-        <page name='Swift Collection'/>
-        <page name='Control Flow'/>
-        <page name='Swift Function'/>
+        <page name='Part one -Git and GitHub'/>
+        <page name='Part two -Swift Basic'/>
+        <page name='Part three -Swift Collection'/>
+        <page name='Part four -Control Flow'/>
+        <page name='Part five -Swift Function'/>
     </pages>
 </playground>
