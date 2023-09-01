@@ -21,8 +21,8 @@ func payment()->Double{
 
 
 //MARK: -2. Multiply function
-func multiply(a:Double,b:Double=10)->Void{
-    print("\(a*b)")
+func multiply(a: Double, b: Double = 10)->Void{
+    print("\(a * b)")
 }
 
 multiply(a: 42)
@@ -35,7 +35,7 @@ multiply(a: 42)
 //Argument label makes the function less obscure visually and more expressive. That make user easier to pick up the purpose of this function.
 //In this case "name" is parameter name and "to" is argument label.
 
-func sayHi(greet:String,to name:String)->Void{
+func sayHi(greet: String, to name: String)->Void{
     print("\(greet), how are you \(name)")
 }
 
@@ -45,7 +45,7 @@ sayHi(greet: "Hello", to: "Jimmy")
 
 
 //MARK: -4. Declare greet functin
-func greet(person name:String)->String{
+func greet(person name: String)->String{
     return "Hello, \(name)"
 }
 

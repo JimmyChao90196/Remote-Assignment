@@ -13,8 +13,8 @@ import UIKit
 
 
 //MARK: - 2. Calculate a circumference and store it in a variable
-var radius:Double = 5
-let pi:Double = Double.pi
+var radius: Double = 5
+let pi: Double = Double.pi
 let circumference = 2 * pi * radius
 
 print(circumference)
@@ -22,21 +22,22 @@ print(circumference)
 
 
 //MARK: - 3. Average calculation
-let x = 10
-let y = 6
+let x: Int = 10
+let y: Int = 5
 
 let average = (x + y) / 2
 
 
 
 //MARK: - 4-1. Convert Int to Double
-let recordSystem:Double = Double(average)
+let recordSystemOrigin: Double = Double(average) // If we convert the value type after the calaulation will get an inaccurate result. Because the when the sum of the constants is an odd number, swift will then round the result value in order to show an integer result.
+let recordSystem: Double = Double(x + y) / 2 // The correct approach is to convert the sum beform the division.
 
 
 
 //MARK: - 4-2. The different between 10/3 and 10.0/3.0
-var integerDivision = (10/3)
-var doubleDivision = (10.0/3.0)
+var integerDivision = (10 / 3)
+var doubleDivision = (10.0 / 3.0)
 // (10/3) will return a rounded integer to us
 // (10.0/3.0) And this will give us a double
 
@@ -45,15 +46,15 @@ var doubleDivision = (10.0/3.0)
 let numA = 10
 let numB = 3
 
-let remainder = 10%3
+let remainder = 10 % 3
 
 
 
 //MARK: -6. Specify data type manually
-var flag:Bool = true
-var inputString:String = "Hello world"
-let bitsInBite:Int = 8
-let averageScore:Double = 86.8
+var flag: Bool = true
+var inputString: String = "Hello world"
+let bitsInBite: Int = 8
+let averageScore: Double = 86.8
 
 
 

@@ -11,7 +11,9 @@ var myFriends = [String]()
 
 
 //MARK: -2. Append things to an array
-myFriends.append(contentsOf: ["Ian","Bomi","Kevin"])
+myFriends.append(contentsOf: ["Ian", "Bomi", "Kevin"])
+myFriends.removeAll()
+myFriends += ["Ian", "Bomi", "Kevin"]
 
 
 //MARK: -3. Add things to the end of array
@@ -48,8 +50,8 @@ let lastElement = myFriends.last
 
 
 //MARK: -9.10.11 Declare a dictionary
-var myCountryNumber = [String:Int]()
-myCountryNumber = ["US":1, "GB":44, "JP":81]
+var myCountryNumber = [String: Int]()
+myCountryNumber = ["US": 1, "GB": 44, "JP": 81]
 myCountryNumber.removeAll()
 
 myCountryNumber["US"] = 1
@@ -62,12 +64,14 @@ myCountryNumber["GB"] = 0
 
 
 //MARK: -12. Declare an empty dictionary
-var myEmptyDictionary = [String:Int]() //Specify the key type and value type in a square bracket. The use "()" to initialize the empty dictionary.
+var myEmptyDictionary = [String: Int]() //Specify the key type and value type in a square bracket. The use "()" to initialize the empty dictionary.
 
 
 
 //MARK: -13 Remove element in dictionary
 myCountryNumber.removeValue(forKey: "JP")// To remove elements from dictionary, we can use removeValue function
+myCountryNumber["GB"] = nil
+
 myCountryNumber
 
 
