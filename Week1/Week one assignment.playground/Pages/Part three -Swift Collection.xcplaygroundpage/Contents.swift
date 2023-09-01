@@ -3,11 +3,8 @@
 import Foundation
 import UIKit
 
-//MARK: -Part three --collection
 
-
-
-
+//: ## Part three --collection
 
 //MARK: -1. Initialize string array
 var myFriends = [String]()

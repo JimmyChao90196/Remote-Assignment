@@ -2,12 +2,9 @@
 
 import Foundation
 import UIKit
-//MARK: - Part four control flow
 
 
-
-
-
+//: ## Part four control flow
 
 //MARK: -1. Print the last three element of an array
 let lottoNumbers:[Int] = [10, 9, 8, 7, 6, 5]

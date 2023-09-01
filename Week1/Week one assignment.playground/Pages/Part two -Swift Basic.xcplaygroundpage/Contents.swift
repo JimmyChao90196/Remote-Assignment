@@ -1,17 +1,15 @@
-//: [Previous](@previous)
+
 
 import Foundation
 import UIKit
 
-//MARK: - Part two --swift Basic
 
-
-
-
+//: ## Part two --swift Basic
 
 //MARK: - 1. The difference between let and var
 // let is a constant. It can not be changed after the declaration.
 // While var stands for variable. The value that store within a variable, can be changed and override any time.
+
 
 
 //MARK: - 2. Calculate a circumference and store it in a variable

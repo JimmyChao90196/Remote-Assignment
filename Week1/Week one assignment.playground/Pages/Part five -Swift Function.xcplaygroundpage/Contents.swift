@@ -1,13 +1,10 @@
 //: [Previous](@previous)
-
+import PlaygroundSupport
 import Foundation
 import UIKit
 
-//MARK: -Part five swift function
 
-
-
-
+//: ## Part five swift function
 
 //MARK: -1. Distinguish the return type
 //The birthday function should return a string, the return type is String

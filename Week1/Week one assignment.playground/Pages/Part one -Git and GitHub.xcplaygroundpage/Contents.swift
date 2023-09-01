@@ -1,9 +1,6 @@
 //AppWorks shchool assignment -week 1
 
-//MARK: - Part one --git and github
-
-
-
+//: ## Part one --git and github
 
 //MARK: - git status:
 //The "git status" command allows us to peek through the status of the current working tree(repository). It displays which files have been altered and are marked as unstaged. Also, it shows the branch we are currently working on.
@@ -63,8 +60,6 @@
 
 
 
-
-
 //MARK: - How to establish a GitHub repo and upload local projects to it.
 
 //Step 1-1: Login to the github personal account and in the repository section. There's a "new" button for us to create a new remote repository.
@@ -100,4 +95,7 @@
 //Step 4-4: "--set-upstream" create a tracking relationship for the first time push. After this. We don't have to specify the [repo_name] and [branch_name] for git already know which repo and branch it suppose to track.
 
 //Step 4-5: Go to github and check the uploaded file.
+
+
+
 
