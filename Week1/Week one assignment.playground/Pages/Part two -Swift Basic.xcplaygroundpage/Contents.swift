@@ -88,3 +88,4 @@ if target == 10{
 
 //Equal operator in swift is written as "==", we can also call it a compare operator.
 //Same as >,<,<=,>= ... they are all compare operator
+
