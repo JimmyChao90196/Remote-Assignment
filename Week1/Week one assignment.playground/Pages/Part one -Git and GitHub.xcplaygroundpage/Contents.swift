@@ -50,6 +50,36 @@
 //"git remote" command shows us all the remote repository that are associated with our local repository. We can also use flag -v to see more detail.
 
 
+
+//MARK: - git rebase
+//"git rebase" is basically saying. I want the all the changes on my current branch(Let's call it feature branch) to be "copied" and pasted to a specific branch(Let's say master branch) based on the changes of master branch. We can say that master branch is being "based", and feature branch is the one whom perform this very action - "rebase", you know, cause it's picking a new base for itself.
+
+//Noted that the original changes(commits) still exsist even after the rebranch.
+
+
+
+//MARK: - git cherry-pick(Not fully understand yet)
+//To explain "git cherry-pick" command we first needs to draw two branches(master and feature), just like git rebase. The action to pick only one commit "from" the feature branch "to" the master branch is cherry picking.
+
+//Noted once "git cherry-pick" command is performed. A new commit is then created with no commit message on master branch. Which also means that it will has a new commit hash.
+
+
+
+//MARK: - git reflog(Not fully understand yet)
+//We know that "git log" command let us to review the history in the local repository, and even remote repository if use the flag --all. But git reflog tracks the history of every branch tips(commits). Even the one that's not being reference by any branch.
+
+//Take the rebase example above. The rebase operation copy and paste all the commits from feature branch to master branch and then moves the feature branch indicator(the name of the branch, very much like HEAD, but represent the branch itself) at the end. I said "copy and paste", that means something is being left behind and forgot, and those commits are not being referenced by any branch and HEAD.
+
+//To view those commits that's being rebased or rest. We can use "git reflog". It'll spit out the information we need like commit hash to go back. To actually go back we can use "git checkout [commit-hash]" to see a specifc commit.
+
+
+//MARK: - git tag
+//"git tag" command is usaully used for marking the version. If I understand it correctly, it leaves a mark at the current commit as a reference point to git history.
+
+
+
+
+
 //MARK: - Fork explain
 //The action fork is to copy a repository hosted by someone else under my account. Then we clone the forked repository to our local mechine. Finally if we want, we can add the original repository(the one that was hosted by someone else) to our local repository to get the latest update.
 
@@ -95,6 +125,9 @@
 //Step 4-4: "--set-upstream" create a tracking relationship for the first time push. After this. We don't have to specify the [repo_name] and [branch_name] for git already know which repo and branch it suppose to track.
 
 //Step 4-5: Go to github and check the uploaded file.
+
+
+
 
 
 
