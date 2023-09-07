@@ -3,5 +3,8 @@
     <pages>
         <page name='Part one'/>
         <page name='Part two'/>
+        <page name='Part three'/>
+        <page name='Part four'/>
+        <page name='Part five'/>
     </pages>
 </playground>
