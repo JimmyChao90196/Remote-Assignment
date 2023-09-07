@@ -23,6 +23,8 @@ myFriends.append("Michael")
 //MARK: -4. Move array item
 myFriends.remove(at: 2)
 myFriends.insert("Kelvin", at: 0)
+myFriends.swapAt(0, 2)
+
 
 
 //MARK: -5. Print out all my friends name
