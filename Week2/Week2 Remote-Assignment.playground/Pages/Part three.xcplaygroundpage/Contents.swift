@@ -50,7 +50,7 @@ struct Person02: PoliceMan {
 
 
 //MARK: -6. Combine the techniques above
-//The line below indicate my friend "Steve" who has a tool man, who is an Engineer.
+//The line below indicate that my friend "Steve" who has a tool man, who is an Engineer.
 var myFriend = Person02(name: "Steve", toolMan: Engineer())
 
 

@@ -35,7 +35,7 @@ enum Gasoline: Int{
 
 
 //1-4 Explaination of associated value
-//Just like the name, associated value can be bind to each cases in enumeration. That sounds just like raw value. So let's point out some feature of it.
+//Just like the rawValue, associated value can be bind to each cases in enumeration. That sounds just like raw value. So let's point out some feature of it.
 //Associated value won't be limited in just one type.
 //Associated value can have different value "type" at each case
 //Associated value can have parameter name. But can't have defualt value
@@ -65,15 +65,13 @@ class People{
 }
 
 
-//2-2
+//2-2, 2-3
 let Jimmy = People()
 let Eunice = People()
 
 Eunice.pet = Pet()
 Jimmy.pet = Pet()
 
-
-//2-3
 guard let pet = Jimmy.pet else { fatalError("pet found nil") }
 print("\(pet.name)")
 
