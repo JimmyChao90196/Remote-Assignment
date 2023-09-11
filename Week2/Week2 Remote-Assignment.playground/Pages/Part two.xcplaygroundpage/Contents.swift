@@ -11,7 +11,7 @@ import UIKit
 //1-1 ~ 1-3
 enum Gasoline: Int{
     
-    var price: Double{
+    var price: Double {
         switch self {
         case .oil92: return  31.1
         case .oil95: return  32.6
@@ -41,14 +41,14 @@ enum Gasoline: Int{
 //Associated value can have parameter name. But can't have defualt value
 
 
-enum playerScore{
+enum PlayerScore{
     
     case playerOne(Score: Double)
     case playerTwo(Int)
     case playerThree(String)
 }
 
-let JimmyScore = playerScore.playerOne(Score: 100)
+let jimmyScore = PlayerScore.playerOne(Score: 100)
 
 
 
@@ -66,16 +66,16 @@ class People{
 
 
 //2-2, 2-3
-let Jimmy = People()
-let Eunice = People()
+let jimmy = People()
+let eunice = People()
 
-Eunice.pet = Pet()
-Jimmy.pet = Pet()
+eunice.pet = Pet()
+jimmy.pet = Pet()
 
-guard let pet = Jimmy.pet else { fatalError("pet found nil") }
+guard let pet = jimmy.pet else { fatalError("pet found nil") }
 print("\(pet.name)")
 
-if let pet = Eunice.pet{
+if let pet = eunice.pet{
     print("\(pet.name)")
 }
 

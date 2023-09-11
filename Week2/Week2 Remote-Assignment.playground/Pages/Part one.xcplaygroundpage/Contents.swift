@@ -173,7 +173,7 @@ tigerA.furry
 //Self in instance method refers to the current instance. It limit the options and narrow it down to instance properties in auto-completion.
 //Self in type/static method refers to type itself. It also limit the options down so we can only access static properties.
 
-//That's why the document said that self keyword disambiguate the line between two subject above.
+//That's why the document said that self keyword disambiguate the line between two subjects above.
 
 struct Tree{
     

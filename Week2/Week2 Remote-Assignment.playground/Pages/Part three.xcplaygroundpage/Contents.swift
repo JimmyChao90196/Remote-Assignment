@@ -12,13 +12,13 @@ import UIKit
 
 
 protocol PoliceMan{
-    func arrestCriminals() -> Void
+    func arrestCriminals()
 }
 
 
 struct Person: PoliceMan {
     
-    func arrestCriminals() -> Void {
+    func arrestCriminals(){
         print("arrested")
     }
     var name: String?
@@ -28,12 +28,12 @@ struct Person: PoliceMan {
 
 //MARK: -3. 4. 5. Protocal being used as type
 protocol ToolMan{
-    func fixComputer()->Void
+    func fixComputer()
 }
 
 
 struct Engineer: ToolMan{
-    func fixComputer() -> Void {
+    func fixComputer() {
         print("Computer fixed")
     }
 }
@@ -43,7 +43,7 @@ struct Person02: PoliceMan {
     var name: String?
     let toolMan: ToolMan
     
-    func arrestCriminals() -> Void {
+    func arrestCriminals() {
         print("arrested")
     }
 }
