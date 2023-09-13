@@ -124,7 +124,7 @@ zoo.weeklyHot = horse
 //They both can be comform to certain protocol
 
 
-//MARK: 6- Comparison reference type and value type
+//MARK: 6- Comparison of reference type and value type
 
 //structure is value type, each time we copy an instance of an object, the value get's copied as well.
 struct Car{

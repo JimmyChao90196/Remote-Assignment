@@ -43,12 +43,12 @@ enum Gasoline: Int{
 
 enum PlayerScore{
     
-    case playerOne(Score: Double)
+    case playerOne(score: Double)
     case playerTwo(Int)
     case playerThree(String)
 }
 
-let jimmyScore = PlayerScore.playerOne(Score: 100)
+let jimmyScore = PlayerScore.playerOne(score: 100)
 
 
 
