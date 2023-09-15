@@ -44,7 +44,7 @@ struct AlertService {
             self.data[.emptyCheckPassword] = AlertInfo(title: "Password not check", message: "Check password field should not be empty")
             self.data[.logInFailed] = AlertInfo(title: "Error", message: "Login failed")
             self.data[.signUpFailed] = AlertInfo(title: "Error", message: "Signup failed")
-            self.data[.success] = AlertInfo(title: "Welcome", message: "Welcome to appwork school")
+            self.data[.success] = AlertInfo(title: "Welcome", message: "Welcome to appworks school")
         }
     }
     
