@@ -19,6 +19,19 @@ struct AlertService {
         case signUpFailed
         case logInFailed
         case success
+        
+        var info: AlertInfo{
+
+            switch self {
+            case .emptyAccount: return AlertInfo(title: "Error", message: "Account should not be empty")
+            case .emptyPassword: return AlertInfo(title: "Error", message: "Password should not be empty")
+            case .emptyCheckPassword: return AlertInfo(title: "Password not check", message: "Check password field should not be empty")
+            case .logInFailed: return AlertInfo(title: "Error", message: "Login failed")
+            case .signUpFailed: return AlertInfo(title: "Error", message: "Signup failed")
+            case .success: return AlertInfo(title: "Welcome", message: "Welcome to appworks school")
+                
+            }
+        }
     }
     
 
@@ -33,24 +46,11 @@ struct AlertService {
         }
     }
     
-    
-    struct AlertData{
-        //A dictionary use enum as key and struct as value
-        var data = [AlertOption: AlertInfo]()
-        
-        init() {
-            self.data[.emptyAccount] = AlertInfo(title: "Error", message: "Account should not be empty")
-            self.data[.emptyPassword] = AlertInfo(title: "Error", message: "Password should not be empty")
-            self.data[.emptyCheckPassword] = AlertInfo(title: "Password not check", message: "Check password field should not be empty")
-            self.data[.logInFailed] = AlertInfo(title: "Error", message: "Login failed")
-            self.data[.signUpFailed] = AlertInfo(title: "Error", message: "Signup failed")
-            self.data[.success] = AlertInfo(title: "Welcome", message: "Welcome to appworks school")
-        }
-    }
+
     
     
     //Define and assign information corresponding to the alert
-    func createAlert(info: AlertInfo) -> UIAlertController {
+    func createAlert(with info: AlertInfo) -> UIAlertController {
         let alertInfo = info
             
         let alertController = UIAlertController(title: alertInfo.title, message: alertInfo.message, preferredStyle: .alert)

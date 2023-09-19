@@ -19,16 +19,15 @@ class ViewController: UIViewController {
     
     
     var userInput = UserInput()
-    var alertStatus: AlertService.AlertOption = .emptyAccount
-    var alertData = AlertService.AlertData()
-    var alertService = AlertService()
+    var alertInfo = AlertService.AlertOption.emptyAccount
+
+    
     
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeSegment()
-        
         assignDelegat()
     }
     
@@ -50,26 +49,26 @@ class ViewController: UIViewController {
         //Pass guard if login == false
         guard userInput.login != true else{
             
-            guard userInput.account != "" else {  alertStatus = .emptyAccount  ; return }
-            guard userInput.password != "" else {  alertStatus = .emptyPassword  ; return }
+            guard userInput.account != "" else {  alertInfo = .emptyAccount  ; return }
+            guard userInput.password != "" else {  alertInfo = .emptyPassword  ; return }
             
             switch (userInput.account, userInput.password) {
-            case ("appworks_school", "1234"): alertStatus = .success
-            default: alertStatus = .logInFailed
+            case ("appworks_school", "1234"): alertInfo = .success
+            default: alertInfo = .logInFailed
             }
             return
         }
 
         
         //If any textfield is not empty, resume the execution
-        guard userInput.account != "" || userInput.password != "" || userInput.check != "" else{ alertStatus = .signUpFailed; return }
+        guard userInput.account != "" || userInput.password != "" || userInput.check != "" else{ alertInfo = .signUpFailed; return }
 
-        guard userInput.account != "" else {  alertStatus = .emptyAccount; return }
-        guard userInput.password != "" else {  alertStatus = .emptyPassword; return }
-        guard userInput.check != "" else { alertStatus = .emptyCheckPassword; return }
-        guard userInput.check == userInput.password else { alertStatus = .signUpFailed; return }
+        guard userInput.account != "" else {  alertInfo = .emptyAccount; return }
+        guard userInput.password != "" else {  alertInfo = .emptyPassword; return }
+        guard userInput.check != "" else { alertInfo = .emptyCheckPassword; return }
+        guard userInput.check == userInput.password else { alertInfo = .signUpFailed; return }
 
-        alertStatus = .success
+        alertInfo = .success
     }
     
     
@@ -84,8 +83,7 @@ class ViewController: UIViewController {
         validateUserInput()
       
         //Show alert according to validation result
-        let alertInfo = alertData.data[alertStatus] ?? AlertService.AlertInfo()
-        let alert = alertService.createAlert(info: alertInfo)
+        let alert = AlertService().createAlert(with: alertInfo.info)
         present(alert, animated: true)
         
     }
@@ -99,6 +97,7 @@ class ViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 0{
             checkTextField.isEnabled = false
+            checkTextField.text = ""
             checkTextField.backgroundColor = .gray
             checkLabel.textColor = .gray
             userInput.login = true
