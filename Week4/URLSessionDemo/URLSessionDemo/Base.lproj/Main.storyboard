@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URLSessionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hj-eJ-xix">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.85999999999999999" green="0.68800000000000006" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StationID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbP-PP-F8U" userLabel="StationIDLabel">
+                                <rect key="frame" x="137" y="207" width="119.33333333333331" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-08-CFO" userLabel="Address label">
+                                <rect key="frame" x="163.66666666666666" y="630" width="66" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StationName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SII-rX-6WO" userLabel="StationNameLabel">
+                                <rect key="frame" x="-22" y="278" width="437" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6hj-eJ-xix" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7HV-Ec-gpw"/>
+                            <constraint firstItem="6hj-eJ-xix" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9q4-GR-CXR"/>
+                            <constraint firstItem="U5z-08-CFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ej7-iJ-grO"/>
+                            <constraint firstItem="6hj-eJ-xix" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="IJJ-9L-m59"/>
+                            <constraint firstItem="6hj-eJ-xix" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WCk-Dc-vZ9"/>
+                            <constraint firstItem="AbP-PP-F8U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eey-B5-bgH"/>
+                            <constraint firstItem="SII-rX-6WO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="fH9-I1-3D9"/>
+                            <constraint firstAttribute="bottom" secondItem="U5z-08-CFO" secondAttribute="bottom" constant="200" id="r15-dU-ctJ"/>
+                            <constraint firstItem="SII-rX-6WO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ufC-Zh-Scc"/>
+                            <constraint firstItem="SII-rX-6WO" firstAttribute="top" secondItem="AbP-PP-F8U" secondAttribute="bottom" constant="35" id="zen-8s-10d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="U5z-08-CFO" id="xjV-0q-s0F"/>
+                        <outlet property="stationIDLabel" destination="AbP-PP-F8U" id="tNf-1c-xsA"/>
+                        <outlet property="stationNameLabel" destination="SII-rX-6WO" id="eWc-MU-JYm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
