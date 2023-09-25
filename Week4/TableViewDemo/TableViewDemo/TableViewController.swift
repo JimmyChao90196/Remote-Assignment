@@ -38,7 +38,7 @@ class TableViewController: UITableViewController {
         
         dataSource = DataSource(tableView: tableView) { (tableView, indexPath, item) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseCell", for: indexPath)
-            cell.textLabel?.text = "This is section:\(indexPath.section), row:\(item)"
+            cell.textLabel?.text = "This is section:\(indexPath.section), row:\(indexPath.row)"
             return cell
         }
     }
@@ -99,15 +99,15 @@ class HeaderView: UITableViewHeaderFooterView {
     //Header view config for background color and constraint.
     private func configure() {
         
-        //Just checking to see if backgroundView is nill or not. If it is, create a view for it.
-        guard var backgroundView else {
+        
+        if  backgroundView == nil {
             backgroundView = UIView()
-            return configure()
         }
+        
         
         //Set background color and font.
         //Disable autoresizingMask for we are about to create constraint purely in code.
-        backgroundView.backgroundColor = UIColor(red: 0.2, green: 0.5, blue: 0.7, alpha: 1)
+        backgroundView!.backgroundColor = UIColor(red: 0.2, green: 0.5, blue: 0.7, alpha: 1)
         addSubview(textLabelView)
         textLabelView.font = UIFont.preferredFont(forTextStyle: .title2)
         textLabelView.translatesAutoresizingMaskIntoConstraints = false

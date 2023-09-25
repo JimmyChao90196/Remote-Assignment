@@ -14,7 +14,8 @@ import UIKit
 //Because by calling reloadData, the tableView will remove/discard all of it's original cells and headers, and starts from the begining. Which may cause performance issue when reloading data from a huge data base.
 
 
-//Second. numberOfRowsInSection is called. //Third. numberOfSection is called
+//Second. numberOfSection is called. //Third. numberOfRowInSection is called
+//Before the table knows how many rows exist in one section, it needs to know how many sections exist first.
 //Now the table view will reconstruct everything from the begining.
 //In order to arrange cell properly according to the new set of sections and rows. The app has to call these two function and retrieve the corresponding data.
 //Section and row will be merged and assign to indexPath property, which also serve as an arguement in cellForRowAt method.
@@ -26,8 +27,8 @@ import UIKit
 //It's also a place where we can "provide" cells to tableView. Notice that the method is asking for a UITableViewCell in the end of function.
 
 
-//Fifth. dequeueReusableCell is called.
-//dequeueReusableCell is called by cellForRowAt method, for cellForRowAt need it to provide a cell.
+//Fifth. dequeueReusableCell is called by use if we choose to define cell in this way.
+//for cellForRowAt need us to provide a cell. We can use dequeueReusableCell to provide and customize one for it.
 //And dequeueReusableCell can dequeue these new set of cells properly.
 //Let'say the cell(any cell) is being scrolled out of screen, it'll not just be deleted. But instead, serve as a new vessel for the new cell.
 
@@ -62,6 +63,9 @@ var layers = 5
 
 //Result
 printTriangle(&layers)
+
+//The layers is being overriden to 9, because by using `inout` syntax we are essentially allow the function to override it's input argument value.
+print(layers)
 
 
 

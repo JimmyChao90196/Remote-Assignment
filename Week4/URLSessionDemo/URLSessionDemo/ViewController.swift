@@ -39,13 +39,7 @@ class ViewController: UIViewController {
     }
    
     
-    
-    
-    
-    
-    
-    
-//MARK: - Fetching data from api
+//MARK: - Fetching data from api -
 
     func fetchData(action: @escaping (ResponseRoot) -> Void ){
         
@@ -53,9 +47,7 @@ class ViewController: UIViewController {
         urlRequest.allHTTPHeaderFields = ["accept": "application/json"]
         urlRequest.httpMethod = "GET"
             
-        let task = URLSession.shared.dataTask(with: urlRequest) {
-            
-            (data, response, error) in
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             
             guard let data = data else{ fatalError("data found nil") }
             guard let response = response as? HTTPURLResponse else{ fatalError("response found nil") }
@@ -65,7 +57,6 @@ class ViewController: UIViewController {
             do {
                 let decodedJSON = try decoder.decode(ResponseRoot.self, from: data)
                 print( response.statusCode )
-                print( response )
                 
                 //Only update UI within main queue
                 OperationQueue.main.addOperation {
