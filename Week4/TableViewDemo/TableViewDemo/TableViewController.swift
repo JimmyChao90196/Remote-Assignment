@@ -100,14 +100,21 @@ class HeaderView: UITableViewHeaderFooterView {
     private func configure() {
         
         
-        if  backgroundView == nil {
+//        if  backgroundView == nil {
+//            backgroundView = UIView()
+//        }
+        
+        guard let backgroundView else{
             backgroundView = UIView()
+            return configure()
+
         }
+        
         
         
         //Set background color and font.
         //Disable autoresizingMask for we are about to create constraint purely in code.
-        backgroundView!.backgroundColor = UIColor(red: 0.2, green: 0.5, blue: 0.7, alpha: 1)
+        backgroundView.backgroundColor = UIColor(red: 0.2, green: 0.5, blue: 0.7, alpha: 1)
         addSubview(textLabelView)
         textLabelView.font = UIFont.preferredFont(forTextStyle: .title2)
         textLabelView.translatesAutoresizingMaskIntoConstraints = false
